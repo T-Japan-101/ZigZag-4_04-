@@ -1,5 +1,5 @@
 //@version=5
-indicator('ZigZag+4_04(ｼﾌﾟ,ﾊﾟﾗ追加', overlay=true, format=format.price, max_labels_count=200, max_lines_count=50)
+indicator('ZigZag+4_05(ｼﾌﾟ,ﾊﾟﾗ追加', overlay=true, format=format.price, max_labels_count=200, max_lines_count=50)
 
 import DevLucem/ZigLib/1 as ZigZag
 
@@ -108,6 +108,9 @@ alertcondition(direction != direction[1] and direction < 0, '下降方向開始'
 
 if direction != direction[1]
     alert(message=(direction < 0 ? "下降方向確定" : "上昇方向確定") + " - ZigZag", freq=alert.freq_once_per_bar_close)
+
+
+
 
 
 
